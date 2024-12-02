@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+// poker five card draw
+package poker5cd;
+
+// エンドポイント定義
+service Poker5cdService {
+  rpc Hello(Poker5cdRequest) returns (Poker5cdResponse);
+  rpc HelloAgain(Poker5cdRequest) returns (Poker5cdResponse);
+}
+
+// 型定義. 番号はフィールドナンバー
+message Poker5cdRequest {
+	string uid = 1; 
+	string name = 2; 
+}
+
+message Poker5cdResponse {
+    string message = 1;
+} 

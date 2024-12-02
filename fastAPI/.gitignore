@@ -1,0 +1,14 @@
+.env.*
+sendgrid.env
+benchmark.env
+brevo.env
+.secret/*
+api_upload/*
+export/*
+share/*.json
+builder/*
+i18n/*
+gunicorn_conf.py
+prod_gunicorn_conf.py
+sql_app.db
+*.pyc

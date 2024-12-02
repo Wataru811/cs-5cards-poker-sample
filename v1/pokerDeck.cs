@@ -26,7 +26,7 @@ public class PokerDeck : Deck {
 	public Hand[] results;
 	public const string HN_RSF = "Royal Straight Flash";
 	public const string HN_SF = "Straight Flash";
-	public const string HN_FKind = "Fuor Of A Kind";
+	public const string HN_FKind = "Four Of A Kind";
 	public const string HN_HH = "Hull House";
 	public const string HN_FL = "Flush";
 	public const string HN_ST = "Straight";
@@ -149,13 +149,14 @@ public class PokerDeck : Deck {
 	// num rank
 	private int NumRank( IEnumerable<int> hand, int rank  ) {
 		var cnt=0;		
-		Console.WriteLine( "NumRank {0}", rank );
+		//Console.WriteLine( "NumRank {0}", rank );
 		foreach( var cc in hand ) {
-		    Console.WriteLine("card {0} rank {1} ", cc, this.cards[cc].rank );	
+		    //Console.WriteLine("card #{0} = {2}{1} ", cc, this.cards[cc].rank, this.cards[cc].suit);	
 			if( this.cards[cc].rank == rank ) {
 				cnt+=1;	
 			}
 		}	
+		Console.WriteLine("numRank {0} = {1} ", rank,cnt);	
 		return cnt;
 	}
 	// num suit
@@ -333,8 +334,6 @@ public class PokerDeck : Deck {
 	}
 
 }
-
-
 
 
 
